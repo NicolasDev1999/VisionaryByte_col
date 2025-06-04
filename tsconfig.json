@@ -22,6 +22,10 @@
       "components/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "model-viewer.d.ts", "src/app/components/Body/ScrollZoomComponent.js"],
+  
+  "exclude": ["node_modules"],
+
+  "typeRoots": ["./types", "./node_modules/@types"]
+
 }
