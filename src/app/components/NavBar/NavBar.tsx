@@ -21,34 +21,19 @@ export default function NavBar() {
 
         {/* Desktop Navbar Links */}
         <div className="hidden md:flex space-x-6">
-          <Link
-            href="/home"
-            className="relative group transition-all hover:text-green-400"
-          >
-            Inicio
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-400 scale-x-0 group-hover:scale-x-100 transition-all"></span>
-          </Link>
-          <Link
-            href="/proyectos"
-            className="relative group transition-all hover:text-green-400"
-          >
-            Proyectos
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-400 scale-x-0 group-hover:scale-x-100 transition-all"></span>
-          </Link>
-          <Link
-            href="/sobre-mi"
-            className="relative group transition-all hover:text-green-400"
-          >
-            Sobre mí
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-400 scale-x-0 group-hover:scale-x-100 transition-all"></span>
-          </Link>
-          <Link
-            href="/contacto"
-            className="relative group transition-all hover:text-green-400"
-          >
-            Contacto
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-400 scale-x-0 group-hover:scale-x-100 transition-all"></span>
-          </Link>
+          {['Inicio', 'Proyectos', 'Sobre mí', 'Contacto'].map((label, i) => {
+            const path = ['home', 'proyectos', 'sobre-mi', 'contacto'][i];
+            return (
+              <Link
+                key={path}
+                href={`/${path}`}
+                className="relative group transition-all hover:text-green-400"
+              >
+                {label}
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-green-400 scale-x-0 group-hover:scale-x-100 transition-all"></span>
+              </Link>
+            );
+          })}
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -62,15 +47,19 @@ export default function NavBar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden flex flex-col items-center space-y-4 mt-4 animate-fade-in">
+      {/* Mobile Dropdown Menu animado */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
+          isMobileMenuOpen ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="flex flex-col items-center space-y-4">
           <Link href="/" className="text-xl hover:text-green-400 transition-all">Inicio</Link>
           <Link href="/proyectos" className="text-xl hover:text-green-400 transition-all">Proyectos</Link>
           <Link href="/sobre-mi" className="text-xl hover:text-green-400 transition-all">Sobre mí</Link>
           <Link href="/contacto" className="text-xl hover:text-green-400 transition-all">Contacto</Link>
         </div>
-      )}
+      </div>
     </nav>
   );
 }

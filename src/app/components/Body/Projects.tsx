@@ -77,7 +77,7 @@ export default function ProjectsNeon() {
               variants={cardVariants}
               whileHover={{ scale: 1.05 }}
             >
-              <div className="p-5">
+              <div className="p-5 text-center">
                 <h3 className="text-xl font-semibold text-cyan-300">{repo.name}</h3>
                 <p className="text-sm text-gray-300 mb-4">
                   {repo.description ?? 'No hay descripción disponible.'}

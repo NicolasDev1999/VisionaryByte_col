@@ -48,7 +48,7 @@ export default function Services() {
               variants={item}
               className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 hover:shadow-neon transition-all"
             >
-              <div className="text-cyan-400 mb-4">{service.icon}</div>
+              <div className="text-cyan-400 mb-4 flex justify-around">{service.icon}</div>
               <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
               <p className="text-gray-300 mb-4">{service.desc}</p>
               <a
