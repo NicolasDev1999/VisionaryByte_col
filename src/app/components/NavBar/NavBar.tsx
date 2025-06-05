@@ -15,9 +15,20 @@ export default function NavBar() {
   return (
     <nav className="bg-opacity-50 text-white px-6 py-4 shadow-md fixed top-0 left-0 w-full z-50 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <h1 className="text-3xl font-bold transition-all hover:text-green-400 cursor-pointer" onClick={() => handleScrollTo('home')}>
-          VisionaryByte
-        </h1>
+        <a
+          onClick={() => handleScrollTo('home')}
+          className="flex items-center space-x-2 cursor-pointer transition hover:scale-105 hover:drop-shadow-[0_0_10px_rgba(34,197,94,0.7)]"
+        >
+          <img
+            src="/VB.png"
+            alt="Logo VisionaryByte"
+            className="w-10 h-10 object-contain"
+          />
+          {/* <span className="hidden md:inline text-2xl font-bold text-white hover:text-green-400 transition">
+            VisionaryByte
+          </span> */}
+        </a>
+
 
         {/* Desktop Navbar Links */}
         <div className="hidden md:flex space-x-6">
@@ -51,14 +62,13 @@ export default function NavBar() {
 
       {/* Mobile Dropdown Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-          isMobileMenuOpen ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
-        }`}
+        className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${isMobileMenuOpen ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'
+          }`}
       >
         <div className="flex flex-col items-center space-y-4">
           {[
             { label: 'Inicio', id: 'home' },
-            { label: 'Servicios', id: 'services' },
+            { label: 'Servicios', id: 'Services' },
             { label: 'Proyectos', id: 'projects' },
             { label: 'Contacto', id: 'contact' },
           ].map(({ label, id }) => (
@@ -72,6 +82,6 @@ export default function NavBar() {
           ))}
         </div>
       </div>
-    </nav>
+    </nav >
   );
 }

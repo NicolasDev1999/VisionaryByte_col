@@ -4,13 +4,38 @@ import { FiGlobe, FiSmartphone, FiZap, FiVideo, FiPenTool, FiUserCheck } from 'r
 import Background from './servicebg/Background';
 
 const services = [
-  { icon: <FiGlobe size={32} />, title: 'Desarrollo Web', desc: 'Sitios rápidos y estilizados con alma digital.' },
-  { icon: <FiSmartphone size={32} />, title: 'Apps Android o iOS', desc: 'Apps móviles pulidas que parecen magia.' },
-  { icon: <FiZap size={32} />, title: 'Automatizaciones', desc: 'Scripts que trabajan mientras tú sueñas.' },
-  { icon: <FiPenTool size={32} />, title: 'Branding Digital', desc: 'Tu marca en esteroides visuales.' },
-  { icon: <FiVideo size={32} />, title: 'Video para Redes', desc: 'Ediciones con flow que atrapan miradas.' },
-  { icon: <FiUserCheck size={32} />, title: 'Consultorías Técnicas', desc: 'Asesoría clara y moderna.' },
+  {
+    icon: <FiGlobe size={32} />,
+    title: 'Desarrollo Web',
+    desc: 'Diseño y desarrollo de sitios web rápidos, responsivos y alineados con tu identidad digital.',
+  },
+  {
+    icon: <FiSmartphone size={32} />,
+    title: 'Aplicaciones Móviles',
+    desc: 'Desarrollo de apps nativas o híbridas para Android y iOS con interfaces fluidas y funcionales.',
+  },
+  {
+    icon: <FiZap size={32} />,
+    title: 'Automatización de Procesos',
+    desc: 'Optimización de tareas repetitivas mediante scripts y herramientas personalizadas.',
+  },
+  {
+    icon: <FiPenTool size={32} />,
+    title: 'Identidad y Branding',
+    desc: 'Creación de una presencia visual sólida y coherente para fortalecer tu marca en el entorno digital.',
+  },
+  {
+    icon: <FiVideo size={32} />,
+    title: 'Producción de Video',
+    desc: 'Edición y creación de contenido audiovisual impactante para redes sociales y campañas digitales.',
+  },
+  {
+    icon: <FiUserCheck size={32} />,
+    title: 'Consultoría Técnica',
+    desc: 'Asesoría profesional en desarrollo web, infraestructura y buenas prácticas tecnológicas.',
+  },
 ];
+
 
 const container = {
   hidden: {},
@@ -52,7 +77,7 @@ export default function Services() {
               <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
               <p className="text-gray-300 mb-4">{service.desc}</p>
               <a
-                href="#contacto"
+                href="#contact"
                 className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-medium hover:scale-105 transition-transform"
               >
                 Contáctame

@@ -8,7 +8,6 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
         <title>VisionaryByte | Servicios de Desarrollo Web y Producción Digital</title>
         <meta
           name="description"
@@ -16,8 +15,6 @@ export default function RootLayout({
         />
         <meta name="keywords" content="desarrollo web, programación, contenido digital, portafolio, VisionaryByte" />
         <meta name="author" content="VisionaryByte" />
-
-        {/* Open Graph para redes sociales */}
         <meta property="og:title" content="VisionaryByte | Desarrollo Web y Producción Digital" />
         <meta
           property="og:description"
@@ -26,8 +23,6 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://visionarybyte.com" />
         <meta property="og:image" content="/img/meta/preview.jpg" />
-
-        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body id="root" suppressHydrationWarning={true}>
