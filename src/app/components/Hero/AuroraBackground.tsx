@@ -31,9 +31,9 @@ export default function AuroraThreeJS() {
 
     // Crear una aurora boreal con partículas
     const loader = new THREE.TextureLoader();
-    const auroraGeometry = loader.load('./img/ScrollZoom/particle2.png');
+    const auroraGeometry = loader.load('./textures/lensflare0_alpha.png');
     const particles = new THREE.BufferGeometry();
-    const particleMaterial = new THREE.PointsMaterial({map: auroraGeometry, color: 0xFFAA, size: 10 , sizeAttenuation: true, transparent: true, opacity: 0.8 });
+    const particleMaterial = new THREE.PointsMaterial({map: auroraGeometry, color: 0x00fff1, size: 10 , sizeAttenuation: true, transparent: true, opacity: 0.8 });
 
     const particlePositions = new Float32Array(1000 * 3);
     for (let i = 0; i < 1000; i++) {
@@ -46,7 +46,7 @@ export default function AuroraThreeJS() {
     const particleSystem = new THREE.Points(particles, particleMaterial);
     scene.add(particleSystem);
 
-    camera.position.z = 500;
+    camera.position.z = 200;
 
     // Animación de partículas
     const animate = () => {
@@ -81,8 +81,20 @@ export default function AuroraThreeJS() {
     <div className="relative w-full min-h-screen overflow-hidden" id="canvas-container">
       <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full"></canvas>
       <div className="relative z-10 text-white text-center py-50">
-        <h1 className="text-5xl font-bold">Bienvenido a mi sitio web</h1>
-        <p className="mt-4 text-lg">Conoce mis proyectos y habilidades.</p>
+        <div className="text-center z-10">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 text-transparent bg-clip-text">
+              VisionaryByte
+            </h1>
+            <p className="text-lg md:text-xl mb-8">
+              Transformando ideas en experiencias digitales únicas.
+            </p>
+            <a
+              href="#Services"
+              className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-medium rounded-lg hover:scale-105 transition-transform"
+            >
+              Descubre mis servicios
+            </a>
+          </div>
       </div>
     </div>
   );

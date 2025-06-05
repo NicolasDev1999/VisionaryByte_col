@@ -5,11 +5,11 @@ import Background from './servicebg/Background';
 
 const services = [
   { icon: <FiGlobe size={32} />, title: 'Desarrollo Web', desc: 'Sitios rápidos y estilizados con alma digital.' },
-  { icon: <FiSmartphone size={32} />, title: 'Apps con Flutter', desc: 'Apps móviles pulidas que parecen magia.' },
+  { icon: <FiSmartphone size={32} />, title: 'Apps Android o iOS', desc: 'Apps móviles pulidas que parecen magia.' },
   { icon: <FiZap size={32} />, title: 'Automatizaciones', desc: 'Scripts que trabajan mientras tú sueñas.' },
   { icon: <FiPenTool size={32} />, title: 'Branding Digital', desc: 'Tu marca en esteroides visuales.' },
   { icon: <FiVideo size={32} />, title: 'Video para Redes', desc: 'Ediciones con flow que atrapan miradas.' },
-  { icon: <FiUserCheck size={32} />, title: 'Consultorías Técnicas', desc: 'Asesoría con claridad y sin rodeos.' },
+  { icon: <FiUserCheck size={32} />, title: 'Consultorías Técnicas', desc: 'Asesoría clara y moderna.' },
 ];
 
 const container = {

@@ -1,15 +1,24 @@
-import { AuroraThreeJS, InteractiveCard, NavBar, Projects, VideoSection,Services,NeonFooter } from "./imports";
+import { AuroraThreeJS, InteractiveCard, NavBar, Projects, VideoSection, Services, NeonFooter } from "./imports";
 export default function Home() {
   return (
     <div>
       <NavBar />
       <main>
-        <AuroraThreeJS />
-        <Services />
+        <section id="home">
+          <AuroraThreeJS />
+        </section>
+        <section id="Services">
+          <Services />
+        </section>
         <VideoSection />
-        <Projects />
+        <section id="projects">
+          <Projects />
+        </section>
+
         <InteractiveCard />
+
         <NeonFooter />
+
       </main>
     </div>
   );
